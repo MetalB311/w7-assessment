@@ -1,0 +1,17 @@
+		
+XL	insert	insert 772.7008 ms
+	append	2.5206 ms
+		
+L	insert	7.5694 ms
+	append	408.3 us
+		
+M	insert	144.4 us
+	append	120.8 us
+		
+Sm	insert	44.2 us
+	append	81.9 us
+		
+Tiny	insert	35 us
+	append	79.2 us
+		
+	insert is taking a significant amount of more time because it is a unshift, which pushes the number to the beginning, therefor changing the index of every element inside the array. push, puts it at the end, therefor just adding a new element in the array without changing every index.	
